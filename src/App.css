@@ -1,6 +1,10 @@
 .inputText{
   width: 400px !important;
 }
+.caption{
+  margin-left:35%;
+  margin-top:2%;
+}
 @media screen and (max-width:800px){
 .inputText{
   width:200px !important;
