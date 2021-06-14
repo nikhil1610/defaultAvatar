@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import Identicon from 'react-identicons';
-import './App.css';
+import {Button, Form} from 'semantic-ui-react';
+import styles from './App.css';
 
 function App() {
   const [input, setInput] = useState("") ;
@@ -8,9 +9,17 @@ function App() {
   return (
   <div className="container">   
     <div className="input mt-5">
-      <h4>Enter any value:</h4>
+      {/* <h4>Enter any value:</h4>
       <input type="text" placeholder="Enter anything..." value={ input } onChange={(e)=>{setInput(e.target.value)}}/>
-      <button className="ml-3" style={{ backgroundColor:'green'}} onClick={()=>setVal(input)}>Generate </button>
+      <button className="ml-3" style={{ backgroundColor:'green'}} onClick={()=>setVal(input)}>Generate </button> */}
+      <Form>
+      <label>Enter any value</label>
+        <Form.Field inline>
+          {console.log(styles)}
+        <input className="inputText" type="text" placeholder="Enter anything..." value={ input } onChange={(e)=>{setInput(e.target.value)}} />
+        <Button  color="green" onClick={()=>setVal(input)}>Generate </Button> 
+        </Form.Field>
+      </Form>
     </div> 
     <div className="default-avatar container" style={{marginTop:"50px", height:"fit-content"}}>
       <div className="identicon" style={{float:"left", transform: "translate(20%, 2%)"}} >
